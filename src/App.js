@@ -1,20 +1,21 @@
-import logo from './logo.svg';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import login from './pages/login.js';
-import Base from './component/Base';
 import Example from './component/Example';
+import CustomNavbar from './component/CustomNavbar';
+import Login from './page/Login';
+import Signup from './page/Signup';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
     <BrowserRouter>
-    
+    <ToastContainer />
     <Routes>
       <Route path="/" element={<Example/>} />
-      <Route path="login" element={<login/>} />
-      <Route path="signup" element={<h1>signup</h1>} />
-      <Route path="logout" element={<h1>logout</h1>} />
+      <Route path="login" element={<Login/>} />
+      <Route path="signup" element={<Signup/>} />
+      <Route path="logout" element={<CustomNavbar/>} />
     </Routes>
     </BrowserRouter>
   );

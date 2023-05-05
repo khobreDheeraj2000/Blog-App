@@ -1,10 +1,10 @@
+import CustomNavbar from "./CustomNavbar";
 
  const Base=({title="welcome", children})=> {
     return(
         <div>
-          <h1>This is a Header</h1>
+          <CustomNavbar/>
           {children}
-          <h2>This is a Footer</h2>
         </div>
     );
 }
